@@ -6,4 +6,4 @@ class User < ActiveRecord::Base
 	has_many :story_upvotes
 
 	validates :user_name, :email, :password, presence: true
-end
+end	
