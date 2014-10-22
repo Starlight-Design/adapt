@@ -35,9 +35,10 @@ ActiveRecord::Schema.define(version: 20141022020507) do
   end
 
   create_table "stories", force: true do |t|
-    t.string   "story"
+    t.string   "title"
+    t.string   "body"
     t.integer  "user_id"
-    t.integer  "forked_from_id"
+    t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 20141022020507) do
 
   create_table "users", force: true do |t|
     t.string   "user_name"
+    t.string   "email"
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"

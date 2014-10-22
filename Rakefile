@@ -2,9 +2,6 @@ require 'rake'
 require "sinatra/activerecord/rake"
 require ::File.expand_path('../config/environment', __FILE__)
 
-require_relative 'lib/users_importer'
-require_relative 'lib/stories_importer'
-
 
 Rake::Task["db:create"].clear
 Rake::Task["db:drop"].clear
@@ -18,12 +15,6 @@ end
 desc "drop the database"
 task "db:drop" do
   rm_f 'db/db.sqlite3'
-end
-
-desc "populate the test database with sample data"
-task "db:populate" do
-  UsersImporter.new.import
-  StoriesImporter.new.import
 end
 
 desc 'Retrieves the current schema version number'
