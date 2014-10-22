@@ -6,8 +6,8 @@ class AddTables < ActiveRecord::Migration
   		t.timestamps
   	end
   	create_table :stories do |t|
-  		t.integer :user_id
   		t.string :story
+      t.integer :user_id
   		t.integer :forked_from_id
   		t.timestamps
   	end
@@ -28,8 +28,8 @@ class AddTables < ActiveRecord::Migration
   		t.timestamps
   	end
   	create_table :steps do |t|
-  		t.integer :story_id
-  		t.string :step_text
+      t.string :step_text
+      t.integer :story_id
   		t.timestamps
   		# Maybe come back and add a photo field - if we have time.
   	end

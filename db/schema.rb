@@ -28,15 +28,15 @@ ActiveRecord::Schema.define(version: 20141022020507) do
   end
 
   create_table "steps", force: true do |t|
-    t.integer  "story_id"
     t.string   "step_text"
+    t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "stories", force: true do |t|
-    t.integer  "user_id"
     t.string   "story"
+    t.integer  "user_id"
     t.integer  "forked_from_id"
     t.datetime "created_at"
     t.datetime "updated_at"
