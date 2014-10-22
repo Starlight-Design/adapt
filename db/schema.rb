@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141022020507) do
 
   create_table "steps", force: true do |t|
     t.string   "step_text"
+    t.boolean  "unlocked"
     t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"
