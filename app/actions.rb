@@ -3,14 +3,15 @@ get '/' do
   erb :index
 end
 
-get '/user_sessions/new' do
-  erb :index
+get '/login' do
+  erb :login
 end
 
-post '/user_sessions/new' do
+# takes username and password from the signin form and check against the User table to find that unique combination. If its found (i.e. != [] which means not and empty array) then it takes us to the tracks page otherwise it takes us back to the login page again.
+post '/login' do
   username = params[:username]
   pw = params[:password]
-  user = User.where(username: username, password: pw)
+  user = User.where(username: username, password: password)
 
   if user != []
     session[:username] = username
@@ -19,6 +20,14 @@ post '/user_sessions/new' do
     redirect '/login'
   end
 end
+
+# get '/user_sessions/new' do
+#   erb :index
+# end
+
+# post '/user_sessions/new' do
+ 
+# end
 
 # get '/stories' do
 #   erb :index
