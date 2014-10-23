@@ -1,11 +1,8 @@
-<h1 class="col-md-10 col-md-offset-4">Track List</h1>
+<h1 class="col-md-10 col-md-offset-4">story List</h1>
 
-<% @tracks.each do |track| %>
-  <div class="track col-md-8 col-md-offset-3">
-    <h3><a href="/tracks/<%= track.id %>"><%= track.song_title %></a> <small>(by: <%= track.artist %>) Track posted by: <%= track.author %></small></h3>
-    <form action="/tracks/<%= track.id %>/upvotes" method="post">
-    <input type='submit' value='Upvote'> (<%= track.upvotes || 0 %> votes)
-    </form>
-    <p><%= track.url %></p>
+<% @stories.each do |story| %>
+  <div class="story col-md-8 col-md-offset-3">
+    <h3><a href="/stories/<%= story.id %>"><%= story.title %></a> <small>(by: <%= story.title %>) story posted by: <%= story.title %></small></h3>
+    <p><%= story.title %></p>
   </div>
 <% end %>
