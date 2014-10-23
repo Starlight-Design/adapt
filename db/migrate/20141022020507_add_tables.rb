@@ -9,6 +9,7 @@ class AddTables < ActiveRecord::Migration
   	create_table :stories do |t|
       t.string :title
   		t.string :body
+      # t.integer :score, default: 0
       t.integer :user_id
   		t.integer :story_id
   		t.timestamps

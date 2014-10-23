@@ -1,6 +1,6 @@
 # Homepage (Root path)
 
-use Rack::Logger
+# use Rack::Logger
 
 enable :sessions
 
@@ -27,7 +27,6 @@ post '/login' do
 
   if user != nil
     session[:user_id] = user.id
-
     redirect '/stories'
   else
     redirect '/login'
@@ -35,6 +34,71 @@ post '/login' do
 
 end
 
+get '/stories' do
+  @stories = Story.all
+  erb :'stories/index'
+end
+
+post '/stories' do
+  @stories = Story.new(
+    title:   params[:title],
+    body:    params[:body]
+  )
+  if @stories.save
+    redirect '/stories'
+  else
+    erb :'stories/new'
+  end
+end
+
+
+get '/stories/new' do
+  if current_user
+    erb :'stories/new'
+  else
+    redirect '/'
+  end
+end
+
+get '/stories/:id' do
+  @story = Story.find params[:id]
+  erb :'stories/show'
+end
+
+# post '/story/:id/upvote' do
+#   Story.find(params[:id]).upvote
+#   redirect :'/stories'
+# end
+
+# post '/story/:id/downvote' do
+#   Story.find(params[:id]).downvote
+#   redirect :'stories'
+# end
+
+# post '/stories/:story_id/upvotes' do
+#   if current_user
+#     @story = Story.find(params[:story_id])
+#     @story.upvotes ||= 0
+#     @story.upvotes += 1
+#     @story.save
+#     redirect '/stories'
+#   else
+#     redirect '/'
+#   end
+# end
+# post '/stories' do
+#   if current_user
+#     @story = Story.new(
+#       title:   params[:title],
+#       body:    params[:body],
+#     )
+#       if @story.save
+#         redirect '/stories'
+#       else
+#         erb :'stories/new'
+#       end
+#   end
+# end
 # get '/user_sessions/new' do
 #   erb :index
 # end
