@@ -57,8 +57,8 @@ end
 # end
 
 
-get '/signup' do
-  erb :signup
+get '/register' do
+  erb :register
 end
 
 post '/register' do
@@ -71,7 +71,3 @@ post '/register' do
   end
 end
 
-get '/logout' do
-  session.clear
-  redirect '/'
-end
