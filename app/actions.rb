@@ -1,4 +1,7 @@
 # Homepage (Root path)
+
+use Rack::Logger
+
 enable :sessions
 
 helpers do
@@ -18,12 +21,12 @@ end
 
 
 post '/login' do
-  username = params[:username]
-  pw = params[:password]
-  user = User.where(username: username, password: password)
+  username = params[:user_name]
+  password = params[:password]
+  user = User.where(user_name: username, password: password).first
 
-  if user != []
-    session[:username] = username
+  if user != nil
+    session[:user_id] = user.id
 
     redirect '/stories'
   else
@@ -71,3 +74,8 @@ post '/register' do
   end
 end
 
+
+get '/logout' do
+  session.clear
+  redirect '/'
+end

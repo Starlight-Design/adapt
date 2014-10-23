@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Adapt</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/loginstyle.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -25,15 +49,15 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <% if !current_user %>
-          <button type="button" class="btn btn-default navbar-btn" ><a href="/signin" class="signin_button">Sign in</a></button>
-          <button type="button" class="btn btn-default navbar-btn" ><a href="/signup" class="signup_button">Sign up</a></button>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/signup">Post Track</a></button>
+          <button type="button" class="btn btn-default navbar-btn" ><a href="/login">Login</a></button>
+          <button type="button" class="btn btn-default navbar-btn" ><a href="/register">Register</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/register">Post Story</a></button>
         <% end %>
         <% if current_user %>
           <button type="button" class="btn btn-default navbar-btn" ><a href="/logout" class="logout_button">Log out</a></button>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/tracks/new">Post Track</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories/new">Post Story</a></button>
         <% end %>
-      <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/tracks">Track list</a></button>
+      <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories">Story wall</a></button>
     </div>
   </nav>
   <%= yield %>
@@ -50,6 +74,9 @@
 
   </nav>  
 
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/javascript/application.js"></script>
   <!-- Latest compiled and minified JavaScript -->
