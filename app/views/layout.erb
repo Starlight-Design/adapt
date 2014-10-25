@@ -14,7 +14,7 @@
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/stylesheets/loginstyle.css" rel="stylesheet">
+    <link href="/stylesheets/application.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,23 +46,24 @@
   <title></title>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav">
+    <h1>ADAPT</h1>
     <div class="container">
         <% if !current_user %>
-          <button type="button" class="btn btn-default navbar-btn" ><a href="/login">Login</a></button>
-          <button type="button" class="btn btn-default navbar-btn" ><a href="/register">Register</a></button>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/register">Post Story</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-right" ><a href="/login">Login</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-right" ><a href="/register">Register</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-left"><a href="/register">Post Story</a></button>
         <% end %>
         <% if current_user %>
-          <button type="button" class="btn btn-default navbar-btn" ><a href="/logout" class="logout_button">Log out</a></button>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories/new">Post Story</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-right" ><a href="/logout" class="logout_button">Log out</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-left"><a href="/stories/new">Post Story</a></button>
         <% end %>
-      <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories">Story wall</a></button>
+      <button type="button" class="btn btn-default navbar-btn navbar-left"><a href="/stories">Story Wall</a></button>
     </div>
   </nav>
   <%= yield %>
 
-  <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" id="foot">
 
       <% if current_user %>
        <div class="container">

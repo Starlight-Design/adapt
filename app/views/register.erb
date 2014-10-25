@@ -1,16 +1,18 @@
-<h1 class="col-md-8 col-md-offset-3">Sign up here:</h1>
-<form method="post" action="/register" role="form">
+<div class="bodyclr2">
+<h1 class="col-md-8 col-md-offset-3" id="registerhead">Register New Account</h1>
+<form method="post" action="/register" role="form" id="registerform">
   <div class="form-group col-md-8 col-md-offset-3">
-    <label for="name">Your name</label>
-    <input type="text" class="width_control form-control" id="users_name" placeholder="Enter your name here" name="user_name">
+    <label for="name">Username</label>
+    <input type="text" class="width_control form-control" id="user_name" placeholder="Username" name="user_name">
   </div>
   <div class="form-group col-md-8 col-md-offset-3">
     <label for="Email">Email</label>
-    <input type="text" class="width_control form-control" id="email" placeholder="Enter Email here" name="email">
+    <input type="text" class="width_control form-control" id="email" placeholder="Email" name="email">
   </div>
   <div class="form-group col-md-8 col-md-offset-3">
     <label for="password">Password</label>
-    <input type="password" class="width_control form-control"  id="password" placeholder="Enter your password here" name="password">
+    <input type="password" class="width_control form-control"  id="password" placeholder="Password" name="password">
+    <button type="submit" class="btn btn-default col-md-2 col-md-offset-4" id="registerBTN">Submit</button>
   </div>
-  <button type="submit" class="btn btn-default col-md-2 col-md-offset-4">Submit</button>
 </form>
+</div>
