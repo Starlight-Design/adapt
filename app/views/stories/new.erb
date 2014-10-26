@@ -1,0 +1,32 @@
+<% if @track && @track.errors.any? %>
+  <div>
+    <strong>Some issues with your post, please fix them:</strong>
+    <ul>
+      <% @track.errors.full_messages.each do |track| %>
+        <li><%= track %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<h1 class="col-md-8 col-md-offset-3">List a new track here:</h1>
+<form method="post" action="/tracks" role="form">
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="author">Your name</label>
+    <input type="text" class="width_control form-control" id="author" placeholder="Enter your name" name="author" value"<%= @track && @track.author%>">
+  </div>
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="artist">Artist name</label>
+    <input type="text" class="width_control form-control" id="artist" placeholder="Enter Artist name" name="artist" value"<%= @track && @track.artist%>">
+  </div>
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="song_title">Song title</label>
+    <input type="text" class="width_control form-control"  id="song_title" placeholder="Enter Song title" name="song_title" value="<%= @track && @track.song_title %>">
+  </div>
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="youtube_embed_code">YouTube Embed Code</label>
+    <input type="text" class="width_control form-control" id="youtube_embed_code" placeholder="Enter YouTube Embed Code" name="url" value="<%= @track && @track.url %>">
+  </div>
+
+  <button type="submit" class="btn btn-default col-md-2 col-md-offset-4">Submit</button>
+</form>
