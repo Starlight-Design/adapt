@@ -40,29 +40,37 @@ get '/stories' do
 end
 
 post '/stories' do
-
-
-  @stories = Story.new(
+  @stories = Story.create(
     title:   params[:title],
     body:    params[:body]
   )
-
   i=1
-  #do loop for number of steps params[:num_steps].to_i
-    x = ":step_text_#{i}"
+  params[:num_steps].to_i.times do
+    x = "step_text_#{i}"
     y = x.to_sym
-    i+=1;
-  #
-
-    @stories.steps.new(step_text: params[y], order_id: i)
-  #########
-
+        # binding.pry
+    @stories.steps.create(step_text: params[y], order_id: i)    
+    i+=1
+  end  
   if @stories.save
     redirect '/stories'
   else
     erb :'stories/new'
   end
 end
+
+
+
+  # #do loop for number of steps params[:num_steps].to_i
+  #   x = ":step_text_#{i}"
+  #   y = x.to_sym
+  #   i+=1;
+  # #
+
+  #   @stories.steps.new(step_text: params[y], order_id: i)
+  # #########
+
+
 
 
 get '/stories/new' do
@@ -73,8 +81,17 @@ get '/stories/new' do
   end
 end
 
+#################################
+  # x = Story.find(1)
+  # x.steps.where(order_id: 2)
+#################################
+
 get '/stories/:id' do
-  @story = Story.find params[:id]
+  @story = Story.find params[:id] 
+  # binding.pry
+
+  # @step = Story.steps params[:id]   
+  #  binding.pry
   erb :'stories/show'
 end
 
