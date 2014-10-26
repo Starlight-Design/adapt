@@ -33,6 +33,7 @@ class AddTables < ActiveRecord::Migration
       t.string :step_text
       t.boolean :unlocked
       t.integer :story_id
+      t.integer :order_id
   		t.timestamps
   		# Maybe come back and add a photo field - if we have time.
   	end
