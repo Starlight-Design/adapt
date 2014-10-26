@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 class="col-md-10 col-md-offset-4">Story List</h1>
 
 <% @stories.each do |story| %>
@@ -6,3 +7,13 @@
     <small><%= story.body %></small>
   </div>
 <% end %>
+=======
+<h1 class="col-md-10 col-md-offset-4">story List</h1>
+
+<% @stories.each do |story| %>
+  <div class="story col-md-8 col-md-offset-3">
+    <h3><a href="/stories/<%= story.id %>"><%= story.title %></a> <small>(by: <%= story.title %>) story posted by: <%= story.title %></small></h3>
+    <p><%= story.title %></p>
+  </div>
+<% end %>
+>>>>>>> 780e10b4b8cb8e09485c3e01639a8ddb3accd139
