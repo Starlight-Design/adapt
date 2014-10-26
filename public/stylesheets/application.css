@@ -1,0 +1,180 @@
+/* General Styles */
+
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family:Avenir;
+}
+
+.bodyclr {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#3970CC;
+}
+
+.bodyclr2 {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#2F377F;
+}
+
+/* Login Form Styles */
+
+.form-signin {
+  width:30%;
+  height:300px;
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+}
+
+#signinBTN {
+  position:relative;
+  width:300px;
+  color:#FFF;
+  display:block;
+  text-decoration:none;
+  margin:0 auto;
+  border-radius:5px;
+  border:solid 1px #488CFF;
+  background:#488CFF;
+  text-align:center;
+  padding:20px 30px;
+  
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  
+  -webkit-box-shadow: 0px 9px 0px #24467F;
+  -moz-box-shadow: 0px 9px 0px #24467F;
+  box-shadow: 0px 9px 0px #24467F;
+}
+
+#signinBTN:active {
+  -webkit-box-shadow: 0px 2px 0px #24467F;
+  -moz-box-shadow: 0px 2px 0px #24467F;
+  box-shadow: 0px 2px 0px #24467F;
+  position:relative;
+  top:7px;
+}
+
+#registerBTN {
+  position:relative;
+  width:300px;
+  color:#FFF;
+  display:block;
+  text-decoration:none;
+  margin:0 auto;
+  border-radius:5px;
+  border:solid 1px #4653BF;
+  background:#4653BF;
+  text-align:center;
+  padding:20px 30px;
+  margin-top:30px;
+  
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  
+  -webkit-box-shadow: 0px 9px 0px #171C40;
+  -moz-box-shadow: 0px 9px 0px #171C40;
+  box-shadow: 0px 9px 0px #171C40;
+}
+
+#registerBTN:active {
+  -webkit-box-shadow: 0px 2px 0px #171C40;
+  -moz-box-shadow: 0px 2px 0px #171C40;
+  box-shadow: 0px 2px 0px #171C40;
+  position:relative;
+  top:7px;
+}
+
+.btn-default {
+  text-shadow:none;
+}
+
+.form-signin-heading {
+  color:white;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* Navbar Styles */
+
+#nav {
+  background:#24467F;
+  border:none;
+}
+
+#nav h1 {
+  padding:7px 0 0 10px;
+  margin:0;
+  display:inline-block;
+  float:left;
+  z-index:9999;
+  top:50%;
+  color:white;
+}
+
+#foot {
+  background:#24467F;
+  border:none;
+}
+
+.navbar-left {
+  margin-right:10px;
+}
+
+.navbar-right {
+  margin-left:10px;
+}
+
+.navbar-btn {
+  background:#488CFF;
+  border:none;
+}
+
+.navbar-btn:hover {
+  background:#94BCFF;
+  border:none;
+  transition:0.5s;
+}
+
+.navbar-btn a {
+  color:white;
+  text-shadow:none;
+}
+
+.navbar-btn a:hover {
+  text-decoration:none;
+}
+
+/* Register Form Styles */
+
+#registerform {
+  width:35%;
+  height:300px;
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 5%;
+  color:white;
+}
+
+#registerhead {
+  color:white;
+  height:300px;
+  top:20%;
+  left:11.5%;
+  right:0;
+  bottom:0;
+}
+
+.container {
+  margin-right:none;
+}
