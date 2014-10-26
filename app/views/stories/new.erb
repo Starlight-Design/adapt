@@ -1,0 +1,29 @@
+<% if @story && @story.errors.any? %>
+  <div>
+    <strong>Some issues with your post, please fix them:</strong>
+    <ul>
+      <% @story.errors.full_messages.each do |story| %>
+        <li><%= story %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<h1 class="col-md-8 col-md-offset-3">List a new story here:</h1>
+<form method="post" action="/stories" role="form">
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="title">Title</label>
+    <input type="text" class="width_control form-control" id="title" placeholder="Enter your title" name="title" value"<%= @story && @story.title%>">
+  </div>
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="body">Story</label>
+    <input type="text" class="width_control form-control" id="body" placeholder="Enter your story" name="body" value"<%= @story && @story.body%>">
+  </div>
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="step_text">Steps</label>
+    <input type="text" class="width_control form-control"  id="step_text" placeholder="Enter Song title" name="step_text_1" value="<%= @story && @steps.step_text %>">
+    <input style="display:none" type="text" id="num_steps" name="num_steps" value="1">
+    <button class="stepping">Add step</button>
+  </div>
+  <button type="submit" class="btn btn-default col-md-2 col-md-offset-4">Submit</button>
+</form>
