@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAnFQGAP///wCrXAcA+rt4APWsXQDykikA/KA9APeoUgC6ZQkAz20EAPzDhgB6QgUA44gnAIpLCADeexAAAAAAAAAAAAAAzMzMzMzMAA7uLu7u7u7gARIiERERERADIiIjOZmTkAmSIiKZmZmQCqoiIiqqKqAP//IiItIt8A3d3SIiIi3QBmZmYiIiJmAHd3d3IiIncAiIiIIiIiiABVVVIiIiJVAEREREREREQAC7u7u7u7sAAAAAAAAAAADAAwAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAADAAwAA" rel="icon" type="image/x-icon" />
 
     <title>Adapt</title>
 
@@ -53,9 +53,9 @@
         <% end %>
         <% if current_user %>
           <button type="button" class="btn btn-default navbar-btn" ><a href="/logout" class="logout_button">Log out</a></button>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories/new">Post Story</a></button>
+          <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories/new" id="poststoryBTN">Post Story</a></button>
         <% end %>
-      <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories">Story Wall</a></button>
+      <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="/stories" id="storywallBTN">Story Wall</a></button>
     </div>
   </nav>
   <%= yield %>

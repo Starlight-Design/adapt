@@ -35,6 +35,29 @@ body, h1, h2, h3, h4, h5, h6, p {
   -webkit-filter: blur(3px);
 }
 
+.backgroundimg4 {
+  background: url('http://2.bp.blogspot.com/-Sv2Im2lZCLA/TsBqUZA6JPI/AAAAAAAAAAs/4TPzyybdPFU/s1600/Wall%2Bof%2BPost-its.jpg');
+  position:absolute;
+  width:150%;
+  height:150%;
+  top:-150px;
+  left:-400px;
+  z-index:9997;
+  -webkit-filter: blur(3px);
+}
+
+.backgroundimg5 {
+  background: url('http://allthebuzz.co.uk/wp-content/uploads/2014/04/Heart-Love-Sky-Hands-Silhouette.jpg');
+  position:absolute;
+  width:130%;
+  height:130%;
+  top:-200px;
+  left:-235px;
+  z-index:9997;
+  -webkit-filter: blur(3px);
+}
+
+
 .fulldiv {
   width:100%;
   height:100%;
@@ -76,6 +99,18 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 input:-moz-placeholder { 
   color:#f00 !important;
+}
+
+#poststoryBTN {
+  padding-left:30px;
+  padding-right:30px;
+  position:relative;
+}
+
+#storywallBTN {
+  padding-left:30px;
+  padding-right:30px;
+  position:relative;
 }
 
 /* Login Form Styles */
@@ -328,4 +363,67 @@ input:-moz-placeholder {
   box-shadow: 0px 2px 0px #171C40;
   position:relative;
   top:7px;
+}
+
+/* Story Wall CSS */
+
+#story {
+  width:100%;
+  height:50px;
+  margin:0;
+  color:white;
+  background:rgba(0,0,0,0.5);
+  z-index:9998;
+}
+
+#story:hover {
+  background:#4661FF;
+  transition:0.3s;
+}
+
+#story h3 a {
+  color:white;
+  text-decoration:none;
+  position:relative;
+  top:-7px;
+}
+
+#story small {
+  color:white;
+  float:right;
+  position:relative;
+  top:-40px;
+}
+
+.storywall {
+  padding-top:50px;
+}
+
+.storyform {
+  width:40%;
+  height:300px;
+  margin: auto;
+  position: relative;
+  top: 55px; 
+  left: -15px; 
+  bottom: 0; 
+  right: 0;
+  z-index:9998;
+}
+
+label {
+  color:white;
+}
+
+.storyform h1 {
+  color:white;
+  text-align:center;
+  margin:25px 0 25px 117px;
+}
+
+.storyform input[type=text]{
+  width:300px !important;
+  position:relative;
+  margin:0;
+  right:0;
 }

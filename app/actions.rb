@@ -27,9 +27,9 @@ end
 
 
 post '/login' do
-  username = params[:user_name]
+  email = params[:email]
   password = params[:password]
-  user = User.where(user_name: username, password: password).first
+  user = User.where(email: email, password: password).first
 
   if user != nil
     session[:user_id] = user.id
@@ -86,6 +86,13 @@ get '/stories/new' do
     redirect '/'
   end
 end
+
+# post '/stories/:story_id/upvotes' do
+#   story = Story.find params[:story_id]
+#   user = User.find params[:story_id]
+#   StoryUpvote.create story_id: story.id, user_id: user.id
+#   redirect '/stories'
+# end
 
 #################################
   # x = Story.find(1)
