@@ -1,20 +1,22 @@
+<div class="backgroundimg6"></div>
 <div class="jumbotron">
-  <h2><%= @story.title %> by <%= current_user.user_name %></h2>
-  <p> <%= @story.body %> </p>
+  <h1>"<%= @story.title %>"</h1> 
+  <h3>by <%= current_user.user_name %></h3>
+  <p> <em><%= @story.body %></em> </p>
   <!-- need to put in if !is_original_poster -->
   <% if @step_id > 0 %>
-			  <div>
-			  	<h3>Step <%= @step_id %></h3>
-			  	<h1>
+			  <div class="stepshow">
+			  	<h3 class="stepnum">Step <%= @step_id %></h3>
+			  	<h2 class="steptext">
 			  		<%= @story.steps[@step_id - 1].step_text %>
 			  	</h1>
 			  </div>
 	<% end %>
 	<% if @step_id + 1 <= @story.steps.length %>
-  	<p><a href="/stories/<%= @story.id %>/step/<%= @step_id + 1 %>" class="btn btn-primary btn-lg" role="button">To Step <%= @step_id + 1 %></a></p>
+  	<p><a href="/stories/<%= @story.id %>/step/<%= @step_id + 1 %>" class="btn btn-primary btn-lg" role="button" id="nextstep">To Step <%= @step_id + 1 %></a></p>
   <% end %>
   <% if @step_id == @story.steps.length %>
-  	<p><a href="/stories/<%= @story.id %>/step/<%= @step_id - 1 %>" class="btn btn-primary btn-lg" role="button">Back To Step <%= @step_id - 1 %></a></p>
+  	<p><a href="/stories/<%= @story.id %>/step/<%= @step_id - 1 %>" class="btn btn-primary btn-lg" role="button" id="prevstep">Back To Step <%= @step_id - 1 %></a></p>
   <% end %>
-  <p><a href="/stories" class="btn btn-primary btn-lg" role="button">Back to Story Wall</a></p>
+  <p><a href="/stories" class="btn btn-primary btn-lg" role="button" id="returnwall">Back to Story Wall</a></p>
 </div>

@@ -10,7 +10,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            wrapper.append('<div class="form-group col-md-8 col-md-offset-3"><label for="step_text">Steps</label><input type="text" class="width_control form-control"  id="step_text" placeholder="Enter step" name="step_text_'+x+'"></div>'); //add input box
+            wrapper.append('<div class="form-group col-md-8 col-md-offset-3" id="newstep"><label for="step_text">Steps</label><input type="text" class="width_control form-control"  id="step_text" placeholder="Enter step" name="step_text_'+x+'"></div>'); //add input box
         		num_steps.attr('value', x)
         }
     });
