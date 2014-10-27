@@ -2,6 +2,7 @@
 <div class="jumbotron">
   <h1>"<%= @story.title %>"</h1> 
   <p> <em><%= @story.body %></em> </p>
+  <p> <em>by <%= @story.user_name %></em></p>
   <!-- need to put in if !is_original_poster -->
   <% if @step_id > 0 %>
 			  <div class="stepshow">
