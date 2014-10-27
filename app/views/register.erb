@@ -1,16 +1,21 @@
-<h1 class="col-md-8 col-md-offset-3">Sign up here:</h1>
-<form method="post" action="/register" role="form">
+<div class="backgroundimg3"></div>
+<div class="fulldiv">
+<div class="regpage">
+<form method="post" action="/register" role="form" id="registerform">
+  <h1 class="col-md-8 col-md-offset-3">Let's Get Started.</h1>
   <div class="form-group col-md-8 col-md-offset-3">
-    <label for="name">Your name</label>
-    <input type="text" class="width_control form-control" id="users_name" placeholder="Enter your name here" name="user_name">
-  </div>
-  <div class="form-group col-md-8 col-md-offset-3">
-    <label for="Email">Email</label>
-    <input type="text" class="width_control form-control" id="email" placeholder="Enter Email here" name="email">
+    <label for="name">Username</label>
+    <input type="text" class="width_control form-control" id="users_name" placeholder="Username" name="user_name">
   </div>
   <div class="form-group col-md-8 col-md-offset-3">
     <label for="password">Password</label>
-    <input type="password" class="width_control form-control"  id="password" placeholder="Enter your password here" name="password">
+    <input type="password" class="width_control form-control"  id="password" placeholder="Password" name="password">
   </div>
-  <button type="submit" class="btn btn-default col-md-2 col-md-offset-4">Submit</button>
+  <div class="form-group col-md-8 col-md-offset-3">
+    <label for="Email">Email</label>
+    <input type="text" class="width_control form-control" id="email" placeholder="Email" name="email">
+  </div>
+  <input type="submit" class="btn btn-default col-md-2 col-md-offset-4" id="registerBTN" value="Register">
 </form>
+</div>
+</div>

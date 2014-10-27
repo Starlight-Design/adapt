@@ -4,18 +4,78 @@ body, h1, h2, h3, h4, h5, h6, p {
   font-family:Avenir;
 }
 
-.bodyclr {
+.backgroundimg {
+  background: url('http://thehomemadepractice.files.wordpress.com/2013/05/mountain-climbers.jpg');
   position:absolute;
-  width:100%;
-  height:100%;
-  background:#3970CC;
+  width:105%;
+  height:105%;
+  left:-10px;
+  z-index:9997;
+  -webkit-filter: blur(3px);
 }
 
-.bodyclr2 {
+.backgroundimg2 {
+  background: url('http://www.precor.com/en-us/blog/wp-content/uploads/sites/2/2014/09/iStock_000029674706small.jpg');
   position:absolute;
+  width:105%;
+  height:105%;
+  left:-10px;
+  z-index:9997;
+  -webkit-filter: blur(3px);
+}
+
+.backgroundimg3 {
+  background: url('http://cdn.hifipanda.com/51ba31c25d4b136619.jpg');
+  position:absolute;
+  width:150%;
+  height:150%;
+  top:-150px;
+  left:-400px;
+  z-index:9997;
+  -webkit-filter: blur(3px);
+}
+
+.fulldiv {
   width:100%;
   height:100%;
-  background:#2F377F;
+  position:absolute;
+}
+
+.btn-default {
+  text-shadow:none;
+}
+
+.container {
+  margin-right:none;
+}
+
+.form-control {
+  background:rgba(0,0,0,0.3);
+  color:white;
+  outline:none;
+  border:none;
+  margin-bottom:5px;
+}
+
+.form-control:focus {
+  outline:none;
+  color:white;
+}
+
+::-webkit-input-placeholder { 
+  color:white !important; 
+}
+
+::-moz-placeholder { 
+  color:white !important;
+} 
+
+:-ms-input-placeholder { 
+  color:#f00 !important; 
+}
+
+input:-moz-placeholder { 
+  color:#f00 !important;
 }
 
 /* Login Form Styles */
@@ -29,6 +89,7 @@ body, h1, h2, h3, h4, h5, h6, p {
   left: 0; 
   bottom: 0; 
   right: 0;
+  z-index:9998;
 }
 
 #signinBTN {
@@ -61,41 +122,6 @@ body, h1, h2, h3, h4, h5, h6, p {
   top:7px;
 }
 
-#registerBTN {
-  position:relative;
-  width:300px;
-  color:#FFF;
-  display:block;
-  text-decoration:none;
-  margin:0 auto;
-  border-radius:5px;
-  border:solid 1px #4653BF;
-  background:#4653BF;
-  text-align:center;
-  padding:20px 30px;
-  margin-top:30px;
-  
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  transition: all 0.1s;
-  
-  -webkit-box-shadow: 0px 9px 0px #171C40;
-  -moz-box-shadow: 0px 9px 0px #171C40;
-  box-shadow: 0px 9px 0px #171C40;
-}
-
-#registerBTN:active {
-  -webkit-box-shadow: 0px 2px 0px #171C40;
-  -moz-box-shadow: 0px 2px 0px #171C40;
-  box-shadow: 0px 2px 0px #171C40;
-  position:relative;
-  top:7px;
-}
-
-.btn-default {
-  text-shadow:none;
-}
-
 .form-signin-heading {
   color:white;
   text-align:center;
@@ -107,6 +133,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 #nav {
   background:#24467F;
   border:none;
+  z-index:9999;
 }
 
 #nav h1 {
@@ -119,9 +146,21 @@ body, h1, h2, h3, h4, h5, h6, p {
   color:white;
 }
 
+#nav h1 a {
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+#nav h1 a:hover {
+  opacity:1;
+  transition:0.5s;
+}
+
 #foot {
   background:#24467F;
   border:none;
+  z-index:9999;
 }
 
 .navbar-left {
@@ -152,29 +191,141 @@ body, h1, h2, h3, h4, h5, h6, p {
   text-decoration:none;
 }
 
+#loguser {
+  background:none;
+  color:white;
+  position:relative;
+  left:-145px;
+  border:none;
+  -webkit-box-shadow:none !important;
+}
+
+#loguser:hover {
+  cursor:default;
+}
+
 /* Register Form Styles */
 
-#registerform {
+.regpage {
   width:35%;
-  height:300px;
-  margin: auto;
-  position: absolute;
+  height:500px;
+  position:relative;
+  margin:0 !important;
+  top:250px;
+  left:900px;
+}
+
+#registerform {
+  position:relative;
   top: 0; 
   left: 0; 
   bottom: 0; 
-  right: 5%;
+  right: 0;
   color:white;
+  z-index:9998;
 }
 
-#registerhead {
+#registerform input[type=text], #registerform input[type=password], #registerform input[type=email]{
+  width:300px !important;
+  position:relative;
+  margin:0;
+  right:0;
+}
+
+#registerform input[type=submit]{
+  width:100px !important;
+}
+
+#registerform h1 {
   color:white;
-  height:300px;
-  top:20%;
-  left:11.5%;
+  position:relative;
+  top:0;
+  left:-18px;
   right:0;
   bottom:0;
+  z-index:9998;
+  margin-bottom:30px;
+  text-align:right;
 }
 
-.container {
-  margin-right:none;
+#registerBTN {
+  position:relative;
+  width:50px !important;
+  color:#FFF;
+  display:block;
+  text-decoration:none;
+  margin:0 auto;
+  border-radius:5px;
+  border:solid 1px #4653BF;
+  background:#4653BF;
+  text-align:center;
+  padding:10px 20px;
+  margin-top:30px;
+  left:140px;
+  
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  
+  -webkit-box-shadow: 0px 9px 0px #171C40;
+  -moz-box-shadow: 0px 9px 0px #171C40;
+  box-shadow: 0px 9px 0px #171C40;
+}
+
+#registerBTN:active {
+  -webkit-box-shadow: 0px 2px 0px #171C40;
+  -moz-box-shadow: 0px 2px 0px #171C40;
+  box-shadow: 0px 2px 0px #171C40;
+  position:relative;
+  top:7px;
+}
+
+/* Index Styles */
+
+.jumbotron {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0);
+  text-align:center;
+  z-index:9998;
+}
+
+.jumbotron h1, p {
+  color:white;
+}
+
+#indexpush {
+  padding-top:175px;
+}
+
+#startBTN {
+  position:relative;
+  width:300px;
+  color:#FFF;
+  display:block;
+  margin:0 auto;
+  text-decoration:none;
+  border-radius:5px;
+  border:solid 1px #4653BF;
+  background:#4653BF;
+  text-align:center;
+  padding:20px 30px;
+  margin-top:30px;
+  
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  
+  -webkit-box-shadow: 0px 9px 0px #171C40;
+  -moz-box-shadow: 0px 9px 0px #171C40;
+  box-shadow: 0px 9px 0px #171C40;
+}
+
+#startBTN:active {
+  -webkit-box-shadow: 0px 2px 0px #171C40;
+  -moz-box-shadow: 0px 2px 0px #171C40;
+  box-shadow: 0px 2px 0px #171C40;
+  position:relative;
+  top:7px;
 }
