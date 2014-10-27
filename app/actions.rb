@@ -10,6 +10,12 @@ helpers do
   end
 end
 
+# helpers do
+#   def is_original_poster?
+#     is_original_poster ||= Story.find(session[:user_id]) if session[:user_id]
+#   end
+# end
+
 get '/' do
   erb :index
 end
@@ -40,7 +46,7 @@ get '/stories' do
 end
 
 post '/stories' do
-  @stories = Story.create(
+  @stories = Story.new(
     title:   params[:title],
     body:    params[:body]
   )
@@ -49,7 +55,7 @@ post '/stories' do
     x = "step_text_#{i}"
     y = x.to_sym
         # binding.pry
-    @stories.steps.create(step_text: params[y], order_id: i)    
+    @stories.steps << Step.create(step_text: params[y], order_id: i)    
     i+=1
   end  
   if @stories.save
@@ -89,9 +95,15 @@ end
 get '/stories/:id' do
   @story = Story.find params[:id] 
   # binding.pry
-
+  @step_id = 0
   # @step = Story.steps params[:id]   
   #  binding.pry
+  erb :'stories/show'
+end
+
+get '/stories/:id/step/:step_id' do
+  @story = Story.find params[:id]
+  @step_id = params[:step_id].to_i
   erb :'stories/show'
 end
 
