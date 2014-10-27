@@ -1,0 +1,10 @@
+<div class="backgroundimg4"></div>
+<div class="storywall">
+<% @stories.each do |story| %>
+  <div class="col-md-8 col-md-offset-3" id="story">
+    <h3><a href="/stories/<%= story.id %>"><%= story.title %></a></h3> 
+    <small><%= story.body %></small>
+  </div>
+<% end %>
+</div>
+
